@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maseru Daily Voice | Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="LOGO.png" alt="Maseru Daily Voice Logo" class="logo">
+  <h1>Maseru Daily Voice</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="events.html">Events</a>
+    <a href="videos.html">Videos</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+  <h2>Photo Gallery</h2>
+  <p>Experience our community events and celebrations</p>
+</section>
+
+<!-- GALLERY GRID -->
+<main class="gallery-grid">
+  <!-- IMAGE 1 -->
+  <div class="card">
+    <a href="culture.jpg" class="lightbox">
+      <img src="culture.jpg" alt="Community Event 1">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 1</h3>
+      <p>Highlights from our local cultural event.</p>
+    </div>
+  </div>
+
+  <!-- IMAGE 2 -->
+  <div class="card">
+    <a href="Moshoeshoe.jpg" class="lightbox">
+      <img src="Moshoeshoe.jpg" alt="Community Event 2">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 2</h3>
+      <p>Celebrating Basotho traditions together.</p>
+    </div>
+  </div>
+
+  <!-- IMAGE 3 -->
+  <div class="card">
+    <a href="Pride.jpg" class="lightbox">
+      <img src="Pride.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 3</h3>
+      <p>Lesotho celebrates pride's month.</p>
+    </div>
+  </div>
+  <!-- IMAGE 4 -->
+  <div class="card">
+    <a href="RSL.jpg" class="lightbox">
+      <img src="RSL.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 4</h3>
+      <p>Revenue Services Lesotho gives back to community.</p>
+    </div>
+  </div>
+  <!-- IMAGE 5 -->
+  <div class="card">
+    <a href="Queen.jpg" class="lightbox">
+      <img src="Queen.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 5</h3>
+      <p>The Queen celebrates children's day.</p>
+    </div>
+  </div>
+  <!-- IMAGE 6 -->
+  <div class="card">
+    <a href="King.jpg" class="lightbox">
+      <img src="King.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 6</h3>
+      <p>King Letsie celebrates 200 years of independence at Lerotholi Polytechnic.</p>
+    </div>
+  </div>
+  <!-- IMAGE 7 -->
+  <div class="card">
+    <a href="lebelo.jpg" class="lightbox">
+      <img src="lebelo.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 7</h3>
+      <p>Netbank Lesotho hosts a marathon.</p>
+    </div>
+  </div>
+<!-- IMAGE 8 -->
+  <div class="card">
+    <a href="Hub.jpg" class="lightbox">
+      <img src="Hub.jpg" alt="Community Event 3">
+    </a>
+    <div class="card-content">
+      <h3>Community Event 8</h3>
+      <p>Youth showcases their innovative ideas.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay">
+  <img src="" alt="Preview">
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Maseru Daily Voice</p>
+  <p>Email: info@maserudailyvoice.com | Phone: +266 6878 7814</p>
+  <div class="social">
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX JS -->
+<script>
+const lightboxLinks = document.querySelectorAll('.lightbox');
+const overlay = document.querySelector('.lightbox-overlay');
+const overlayImg = overlay.querySelector('img');
+
+lightboxLinks.forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    overlayImg.src = this.href;
+    overlay.classList.add('active');
+  });
+});
+
+overlay.addEventListener('click', function(){
+  overlay.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
